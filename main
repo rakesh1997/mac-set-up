@@ -1,1 +1,18 @@
+#install home brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+#set up .bashrc
+jdk(){
+  echo "$1"
+export JAVA_HOME=`/usr/libexec/java_home -v $1`
+}
+
+java8(){
+jdk 1.8
+}
+java11(){
+jdk 11
+}
+java17(){
+jdk 17
+}
